@@ -18,14 +18,7 @@
 					<input type="reset" value="취소">
 					<input type="submit" value="작성">
 			</tr>
-		
-		
-		
 		</table>
-	
-	
-	
-	
 	</form>
 </body>
 </html>

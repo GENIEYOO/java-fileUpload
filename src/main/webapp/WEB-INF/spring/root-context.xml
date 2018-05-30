@@ -4,5 +4,24 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>	
+		<property name="url" value="jdbc:mysql://172.31.2.177:3306/FILE"/>
+		<property name="username" value="jiin"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	
+	    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:com/ahope/**/sql/*.xml" />
+        
+    </bean>
+     
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSession"/>
+    </bean> 
+
+
 </beans>
+

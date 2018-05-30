@@ -1,4 +1,4 @@
-package com.ahope.board;
+package com.ahope.file;
 
 import java.text.DateFormat;
 import java.util.Date;

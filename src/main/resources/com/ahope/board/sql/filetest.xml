@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="file"> 
+
+
+	<select id="fileList" resultType="com.ahope.file.dao.FileVO">
+		SELECT 
+		* FROM
+		FILE
+	</select>
+
+	<insert id= "fileInsert" parameterType="com.ahope.file.dao.FileVO">
+		INSERT INTO FILE(fileNo, fileName, fileSize) 
+		VALUES (#{fileNo},#{fileName}, #{fileSize})
+	</insert>
+
+</mapper>
