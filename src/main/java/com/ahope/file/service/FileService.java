@@ -28,13 +28,6 @@ public class FileService {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	//fileSave
 	public  void fileSave(FileVO fileInfo) throws Exception{
 		
